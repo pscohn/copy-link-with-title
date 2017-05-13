@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Copy Link With Title Options</title>
+  <style>
+    body { padding: 10px; }
+    ul { padding: 5px; }
+    li { list-style: none; padding: 5px; }
+    pre { display: inline; }
+  </style>
+</head>
+
+<body>
+  <form action="#">
+    <fieldset>
+      <legend>Choose a Format:</legend>
+      <ul>
+        <li>
+          <input id="basic" type="radio" name="format" value="basic" />
+          <label for="basic">Basic</label> <pre>[title] - [url]</pre>
+        </li>
+        <li>
+          <input id="md" type="radio" name="format" value="md" />
+          <label for="md">Markdown</label> <pre>[[title]]([url])</pre>
+        </li>
+        <li>
+          <input id="html" type="radio" name="format" value="html" />
+          <label for="html">HTML</label> <pre>&lt;a href="[url]"&gt;[title]&lt;/a&gt;</pre>
+        </li>
+        <li>
+          <input id="custom" type="radio" name="format" value="custom" />
+          <label for="custom">Custom</label>
+          <input id="custom-text" type="text" name="custom-text" />
+        </li>
+      </ul>
+      <p>You can use [title] and [url] in your custom format</p>
+    </fieldset>
+  </form>
+  <script src="options.js"></script>
+</body>
+</html>
