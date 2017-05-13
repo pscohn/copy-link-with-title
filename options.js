@@ -12,8 +12,8 @@ function saveCustomText(event) {
 
 function restoreOptions() {
   chrome.storage.sync.get(['format', 'custom'], function(data) {
-    document.getElementById('custom-text').value = data.custom;
-    var radio = document.getElementById(data.format)
+    document.getElementById('custom-text').value = data.custom || '';
+    var radio = document.getElementById(data.format || 'basic')
     radio.checked = true;
   });
 }
